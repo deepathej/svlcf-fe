@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NewStock</title>
+  <link th:href="@{/css/newStock.css}" rel="stylesheet"/>
+  <link th:href="@{/css/common.css}" rel="stylesheet"/>
+</head>
+<body>
+<header>SREE VIJAYALAKSHMI CATTLE FEEDS</header>
+<nav class="menu">
+  <a th:href="@{/home}">HOME</a>
+  <a th:href="@{/sale}">SALE</a>
+  <a th:href="@{/payment}">PAYMENT</a>
+  <a th:href="@{/expense}">EXPENSES</a>
+  <a th:href="@{/users}">USERS</a>
+  <a th:href="@{/stock}">STOCK</a>
+  <a th:href="@{/tdPayment}">TD-PAYMENTS</a>
+  <a th:href="@{/tdExpense}">TD-EXPENSES</a>
+  <a th:href="@{/reports}">REPORTS</a>
+  <a th:href="@{/addStock}">ADD-STOCK</a>
+  <a th:href="@{/analytics}">ANALYTICS</a>
+  <a th:href="@{/extraLinks}">EXTRA-LINKS</a>
+</nav>
+<main>
+  <div class="userValidationSection">
+    <h2>VALIDATE USER</h2>
+    <form name="validateUserForm">
+      <input type="number" name="userId" placeholder="UserId" onchange="validateUserAndGetDetails('newStock')"/>
+      <textarea name="userDetails" rows="4" cols="50" placeholder="UserDetails"></textarea>
+    </form>
+  </div>
+  <div class="addStockSection">
+    <h2>NEW STOCK</h2>
+    <form name="newStockForm">
+      <input type="text" name="stockName" placeholder="Item"/>
+      <input type="text" name="brand" placeholder="Brand"/>
+      <input type="number" name="price" placeholder="Price"/>
+      <input type="number" name="quantity" placeholder="Quantity"/>
+      <input type="number" name="variant" placeholder="Variant"/>
+      <button type="button" onclick="saveNewStockToDB()">ADD NEW STOCK</button>
+    </form>
+  </div>
+</main>
+<footer>
+  <p>&copy; 2024 All rights reserved. Developed by THEJ</p>
+</footer>
+<script th:src="@{/js/stock.js}" type="text/javascript"></script>
+<script th:src="@{/js/user.js}" type="text/javascript"></script>
+</body>
+</html>

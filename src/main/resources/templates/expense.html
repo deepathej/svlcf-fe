@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Expense</title>
+  <link th:href="@{/css/expense.css}" rel="stylesheet"/>
+  <link th:href="@{/css/common.css}" rel="stylesheet"/>
+</head>
+<body>
+<header>SREE VIJAYALAKSHMI CATTLE FEEDS</header>
+<nav class="menu">
+  <a th:href="@{/home}">HOME</a>
+  <a th:href="@{/sale}">SALE</a>
+  <a th:href="@{/payment}">PAYMENT</a>
+  <a th:href="@{/expense}">EXPENSES</a>
+  <a th:href="@{/users}">USERS</a>
+  <a th:href="@{/stock}">STOCK</a>
+  <a th:href="@{/tdPayment}">TD-PAYMENTS</a>
+  <a th:href="@{/tdExpense}">TD-EXPENSES</a>
+  <a th:href="@{/reports}">REPORTS</a>
+  <a th:href="@{/addStock}">ADD-STOCK</a>
+  <a th:href="@{/analytics}">ANALYTICS</a>
+  <a th:href="@{/extraLinks}">EXTRA-LINKS</a>
+</nav>
+<main>
+  <div class="expenseSection">
+    <h2>NEW EXPENSE</h2>
+    <form name="expensesForm">
+      <br/>
+      <input type="number" name="amount" placeholder="Amount"/>
+      <label for="paymentMode">Payment Mode:</label>
+      <select id="paymentMode">
+        <option value="CASH">CASH</option>
+        <option value="ACCOUNT">ACCOUNT</option>
+      </select>
+      <textarea name="remarks" rows="3" cols="50" placeholder="Remarks"></textarea>
+      <button type="button" onclick="saveExpensesToDB()">CONFIRM EXPENSE</button>
+    </form>
+  </div>
+  <div class="cashDepositSection">
+    <h2>DEPOSIT CASH TO ACCOUNT</h2>
+    <form name="cashDepositForm">
+      <br/>
+      <input type="number" name="amount" placeholder="Amount"/>
+      <button type="button" onclick="saveChangesToDB()">CONFIRM DEPOSIT</button>
+    </form>
+  </div>
+</main>
+<footer>
+  <p>&copy; 2024 All rights reserved. Developed by THEJ</p>
+</footer>
+<script th:src="@{/js/expense.js}" type="text/javascript"></script>
+</body>
+</html>

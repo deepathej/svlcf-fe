@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ExtraLinks</title>
+  <link th:href="@{/css/home.css}" rel="stylesheet"/>
+  <link th:href="@{/css/common.css}" rel="stylesheet"/>
+</head>
+<body>
+<header>SREE VIJAYA LAKSHMI CATTLE FEEDS</header>
+<nav class="menu">
+  <a th:href="@{/home}">HOME</a>
+  <a th:href="@{/priceUpdate}">PRICE-UPDATE</a>
+  <a th:href="@{/newStock}">NEW-STOCK</a>
+  <a th:href="@{/user}">NEW-USER</a>
+  <a th:href="@{/userUpdate}">USER-UPDATE</a>
+  <a th:href="@{/balance}">USER-BALANCE</a>
+</nav>
+<main>
+  <img th:src="@{/images/cowsInField.jpg}" alt="Cows in Field">
+</main>
+<footer>
+  <p>&copy; 2024 All rights reserved. Developed by THEJ</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PriceUpdate</title>
+  <link th:href="@{/css/priceUpdate.css}" rel="stylesheet"/>
+  <link th:href="@{/css/common.css}" rel="stylesheet"/>
+</head>
+<body onload="populateBrandField('true')">
+<header>SREE VIJAYALAKSHMI CATTLE FEEDS</header>
+<nav class="menu">
+  <a th:href="@{/home}">HOME</a>
+  <a th:href="@{/sale}">SALE</a>
+  <a th:href="@{/payment}">PAYMENT</a>
+  <a th:href="@{/expense}">EXPENSES</a>
+  <a th:href="@{/users}">USERS</a>
+  <a th:href="@{/stock}">STOCK</a>
+  <a th:href="@{/tdPayment}">TD-PAYMENTS</a>
+  <a th:href="@{/tdExpense}">TD-EXPENSES</a>
+  <a th:href="@{/reports}">REPORTS</a>
+  <a th:href="@{/addStock}">ADD-STOCK</a>
+  <a th:href="@{/analytics}">ANALYTICS</a>
+  <a th:href="@{/extraLinks}">EXTRA-LINKS</a>
+</nav>
+<main>
+  <div class="validateStockSection">
+    <h2>VALIDATE STOCK</h2>
+    <form name="validateStockForm">
+      <select name="brand" onchange="populateItemField('true', 'priceUpdate')">
+        <option>brand</option>
+      </select>
+      <select name="item" onchange="populateVariantField('true', 'priceUpdate')">
+        <option>item</option>
+      </select>
+      <select name="variant" onchange="validateStockAndGetDetails('priceUpdate')">
+        <option>variant</option>
+      </select>
+      <textarea name="stockDetails" rows="4" cols="50" placeholder="StockDetails"></textarea>
+    </form>
+  </div>
+  <div class="priceUpdateSection">
+    <h2>UPDATE STOCK PRICE</h2>
+    <form name="priceUpdateForm">
+      <br/>
+      <input type="number" name="price" placeholder="Price"/>
+      <button type="button" onclick="stockPriceUpdate()">UPDATE STOCK PRICE</button>
+    </form>
+  </div>
+</main>
+<footer>
+  <p>&copy; 2024 All rights reserved. Developed by THEJ</p>
+</footer>
+<script th:src="@{/js/stock.js}" type="text/javascript"></script>
+</body>
+</html>

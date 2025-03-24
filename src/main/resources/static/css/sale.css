@@ -1,0 +1,47 @@
+main {
+    min-height: 87vh;
+    align-items: center;
+    justify-content: center;
+}
+
+table {
+    width: 100%;
+    border: 1px solid #ddd;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    border: 1px solid #ddd;
+    border-collapse: collapse;
+    padding: 10px;
+    text-align: center;
+}
+
+button[name="sale"] {
+    width: 18%;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.userAndProductSection {
+    margin-left: 10px;
+    background-color: #f3f3f3;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    width: 360px;
+}
+
+.cartSummarySection {
+    background-color: #f3f3f3;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    margin-left: 15px;
+    width: 68%;
+    min-height: 80vh;
+    justify-content: center;
+}

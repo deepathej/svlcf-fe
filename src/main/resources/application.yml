@@ -1,0 +1,22 @@
+spring:
+  application.name: SVLCF
+  profiles.active: local
+server:
+  port: 9000
+  servlet.context-path: /svlcf
+logging:
+  level:
+    root: INFO
+    org.springframework.web.servlet.DispatcherServlet: DEBUG
+  file.max-size: 50MB
+management.endpoints.web.exposure.include: metrics
+
+---
+spring:
+  config.activate.on-profile: docker
+logging.file.name: home/Data/Logs/svlcffe.log
+
+---
+spring:
+  config.activate.on-profile: local
+logging.file.name: C:\Data\OneDrive\Logs\svlcffe.log

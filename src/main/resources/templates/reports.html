@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reports</title>
+  <link href="../static/css/reports.css" th:href="@{/css/reports.css}" rel="stylesheet"/>
+  <link href="../static/css/common.css" th:href="@{/css/common.css}" rel="stylesheet"/>
+</head>
+<body onload="blockFutureDates()">
+<header>SREE VIJAYALAKSHMI CATTLE FEEDS</header>
+<nav class="menu">
+  <a th:href="@{/home}">HOME</a>
+  <a th:href="@{/sale}">SALE</a>
+  <a th:href="@{/payment}">PAYMENT</a>
+  <a th:href="@{/expense}">EXPENSES</a>
+  <a th:href="@{/users}">USERS</a>
+  <a th:href="@{/stock}">STOCK</a>
+  <a th:href="@{/tdPayment}">TD-PAYMENTS</a>
+  <a th:href="@{/tdExpense}">TD-EXPENSES</a>
+  <a th:href="@{/reports}">REPORTS</a>
+  <a th:href="@{/addStock}">ADD-STOCK</a>
+  <a th:href="@{/analytics}">ANALYTICS</a>
+  <a th:href="@{/extraLinks}">EXTRA-LINKS</a>
+</nav>
+<main>
+  <div class="userSummarySection">
+    <h2>USER SUMMARY</h2>
+    <form name="userSummaryForm">
+      <br/>
+      <input type="number" name="userId" placeholder="userId"/>
+      <br/>
+      <button type="button" onclick="getUserReport()">USER REPORT</button>
+    </form>
+  </div>
+  <div class="reportsSection">
+    <h2>REPORTS</h2>
+    <form name="reportsForm">
+      <select name="reportType" onchange="updateCalenderField()">
+        <option value="dailyStock">DAILY-STOCK-REPORT</option>
+        <option value="dailyBalance">DAILY-BALANCE-REPORT</option>
+        <option value="dailySales">DAILY-SALES-REPORT</option>
+        <option value="monthlyBalance">MONTHLY-BALANCE-REPORT</option>
+        <option value="monthlySales">MONTHLY-SALES-REPORT</option>
+      </select>
+      <input type="date" name="duration">
+      <button type="button" onclick="getDailyReport()">GET REPORTS</button>
+    </form>
+  </div>
+  <div class="duplicateInvoiceSection">
+    <h2>DUP OR REPLACE INVOICE</h2>
+    <form name="duplicateInvoiceForm">
+      <br/>
+      <select name="operation">
+        <option value="duplicate">DUPLICATE_INVOICE</option>
+        <option value="replace">REPLACE_INVOICE</option>
+      </select>
+      <input type="number" name="invoiceId" placeholder="invoiceNumber"/>
+      <button type="button" onclick="generateDuplicateOrReplaceInvoice()">SUBMIT</button>
+    </form>
+  </div>
+</main>
+<footer>
+  <p>&copy; 2024 All rights reserved. Developed by THEJ</p>
+</footer>
+<script src="../static/js/reports.js" th:src="@{/js/reports.js}" type="text/javascript"></script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+main {
+    min-height: 73.4vh;
+    align-items: center;
+}
+
+.userValidationSection,
+.userUpdateSection {
+    background-color: #f3f3f3;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    margin-left: 140px;
+    width: 500px;
+}

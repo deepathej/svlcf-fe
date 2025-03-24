@@ -1,0 +1,47 @@
+main {
+   min-height: 73.4vh;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 equal-width columns */
+    grid-template-rows: repeat(2, 1fr); /* 2 equal-height rows */
+    height: 73.4vh; /* Full height of the viewport */
+    width: 100vw; /* Full width of the viewport */
+    gap: 10px; /* Space between sections (padding-like effect) */
+}
+
+/* Section styles */
+.section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border: 1px solid #ccc;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.dataHealth {
+    background-color: #cdc9c9;
+}
+
+.section-2 {
+    background-color: lightgreen;
+}
+
+.section-3 {
+    background-color: lightblue;
+}
+
+.section-4 {
+    background-color: lightgoldenrodyellow;
+}
+
+.section-5 {
+    background-color: lightgray;
+}
+
+.section-6 {
+    background-color: lightpink;
+}

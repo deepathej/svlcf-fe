@@ -1,0 +1,90 @@
+body {
+   margin: 0 auto;
+   background-position: center;
+   background-size: contain;
+}
+
+main {
+   font-family: Arial, sans-serif;
+   background-color: #f3f3f3;
+   margin: 0;
+   padding: 0;
+   display: flex;
+}
+
+footer {
+   width: 100%;
+   background-color: #abb2b9;
+   color: #ffffff;
+   position: absolute;
+   text-align: center;
+   font-size: 15px;
+}
+
+h2 {
+   color: #4caf50;
+   margin-bottom: 20px;
+   text-align: center;
+}
+
+label {
+   display: block;
+   margin-bottom: 5px;
+   color: #555;
+   font-weight: bold;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"],
+input[type="month"],
+label,
+textarea,
+select {
+   width: 100%;
+   margin-bottom: 15px;
+   padding: 10px;
+   box-sizing: border-box;
+   border: 1px solid #ddd;
+   border-radius: 5px;
+}
+
+button[type="button"] {
+   padding: 15px;
+   border-radius: 10px;
+   border: none;
+   background-color: #4caf50;
+   color: white;
+   cursor: pointer;
+   width: 100%;
+   font-size: 16px;
+}
+
+.menu {
+   position: sticky;
+   top: 0;
+   background-color: #009900;
+   padding: 3px 0px 3px 0px;
+   margin: 0 auto;
+   overflow: hidden;
+}
+
+.menu a{
+   float: left;
+   color: white;
+   text-align: center;
+   padding: 8px 20px;
+   text-decoration: none;
+   font-size: 18px;
+}
+
+header {
+   font-size: 50px;
+   color: #009900;
+   font-weight: bold;
+   padding: 18px 0px 18px 0px;
+   background-color: #abb2b9;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}

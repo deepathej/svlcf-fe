@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Balance</title>
+    <link th:href="@{/css/balance.css}" rel="stylesheet"/>
+    <link th:href="@{/css/common.css}" rel="stylesheet"/>
+</head>
+<body>
+<nav class="menu">
+    <a th:href="@{/home}">HOME</a>
+    <a th:href="@{/sale}">SALE</a>
+    <a th:href="@{/payment}">PAYMENT</a>
+    <a th:href="@{/expense}">EXPENSES</a>
+    <a th:href="@{/users}">USERS</a>
+    <a th:href="@{/stock}">STOCK</a>
+    <a th:href="@{/tdPayment}">TD-PAYMENTS</a>
+    <a th:href="@{/tdExpense}">TD-EXPENSES</a>
+    <a th:href="@{/reports}">REPORTS</a>
+    <a th:href="@{/addStock}">ADD-STOCK</a>
+    <a th:href="@{/analytics}">ANALYTICS</a>
+    <a th:href="@{/extraLinks}">EXTRA-LINKS</a>
+</nav>
+<main>
+  <div class="usersWithBalanceSection">
+    <h2>USERS WITH BALANCE</h2>
+    <table id="usersWithBalanceTable">
+      <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Address</th>
+        <th>PhoneNumber</th>
+        <th>Balance</th>
+        <th>UserType</th>
+        <th>GSTIN</th>
+      </tr>
+    </table>
+  </div>
+</main>
+<div class="amountRequestFormSection">
+  <form name="usersWithBalanceForm">
+    <input type="number" name="amount" placeholder="Amount"/>
+    <select id="type">
+      <option value="CONSUMER">CONSUMER</option>
+      <option value="SUPPLIER">SUPPLIER</option>
+    </select>
+    <button type="button" onclick="createUserTableWithBalance()">GET BALANCE REPORT</button>
+  </form>
+</div>
+<footer>
+  <p>&copy; 2024 All rights reserved. Developed by THEJ</p>
+</footer>
+<script th:src="@{/js/balance.js}" type="text/javascript"></script>
+</body>
+</html>

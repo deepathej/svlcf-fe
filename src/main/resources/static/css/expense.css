@@ -1,0 +1,15 @@
+main {
+    min-height: 73.4vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.expenseSection,
+.cashDepositSection {
+    margin-left: 30px;
+    background-color: #f3f3f3;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    width: 600px;
+}

@@ -1,2 +1,2 @@
 # svlcf-fe
-SVLCF Frontend Service
+SVLCF front end service

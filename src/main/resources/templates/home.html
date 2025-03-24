@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <link th:href="@{/css/home.css}" rel="stylesheet"/>
+  <link th:href="@{/css/common.css}" rel="stylesheet"/>
+</head>
+<body>
+<header>SREE VIJAYALAKSHMI CATTLE FEEDS</header>
+<nav class="menu">
+  <a th:href="@{/home}">HOME</a>
+  <a th:href="@{/sale}">SALE</a>
+  <a th:href="@{/payment}">PAYMENT</a>
+  <a th:href="@{/expense}">EXPENSES</a>
+  <a th:href="@{/users}">USERS</a>
+  <a th:href="@{/stock}">STOCK</a>
+  <a th:href="@{/tdPayment}">TD-PAYMENTS</a>
+  <a th:href="@{/tdExpense}">TD-EXPENSES</a>
+  <a th:href="@{/reports}">REPORTS</a>
+  <a th:href="@{/addStock}">ADD-STOCK</a>
+  <a th:href="@{/analytics}">ANALYTICS</a>
+  <a th:href="@{/extraLinks}">EXTRA-LINKS</a>
+</nav>
+<main>
+  <img th:src="@{/images/cowsInField.jpg}" alt="Cows in Field">
+</main>
+<footer>
+  <p>&copy; 2024 All rights reserved. Developed by THEJ</p>
+</footer>
+</body>
+</html>

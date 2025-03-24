@@ -1,0 +1,22 @@
+main {
+    min-height: 73.4vh;
+    align-items: center;
+}
+
+.validateUserSection {
+    margin-left: 180px;
+    width: 400px;
+    background-color: #f3f3f3;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+}
+
+.paymentSection {
+    margin-left: 220px;
+    width: 400px;
+    background-color: #f3f3f3;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+}

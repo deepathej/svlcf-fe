@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payment</title>
+  <link th:href="@{/css/payment.css}" rel="stylesheet"/>
+  <link th:href="@{/css/common.css}" rel="stylesheet"/>
+</head>
+<body>
+<header>SREE VIJAYALAKSHMI CATTLE FEEDS</header>
+<nav class="menu">
+  <a th:href="@{/home}">HOME</a>
+  <a th:href="@{/sale}">SALE</a>
+  <a th:href="@{/payment}">PAYMENT</a>
+  <a th:href="@{/expense}">EXPENSES</a>
+  <a th:href="@{/users}">USERS</a>
+  <a th:href="@{/stock}">STOCK</a>
+  <a th:href="@{/tdPayment}">TD-PAYMENTS</a>
+  <a th:href="@{/tdExpense}">TD-EXPENSES</a>
+  <a th:href="@{/reports}">REPORTS</a>
+  <a th:href="@{/addStock}">ADD-STOCK</a>
+  <a th:href="@{/analytics}">ANALYTICS</a>
+  <a th:href="@{/extraLinks}">EXTRA-LINKS</a>
+</nav>
+<main>
+  <div class="validateUserSection">
+    <h2>VALIDATE USER</h2>
+    <form name="validateUserForm">
+      <br/>
+      <input type="number" name="userId" placeholder="UserId" onchange="validateUserAndGetDetails('payment')"/>
+      <textarea name="userDetails" rows="5" cols="50" placeholder="UserDetails"></textarea>
+    </form>
+  </div>
+  <!-- <div class="paymentcorrection">
+    <h2>PAYMENT CORRECTION</h2>
+    <form name="paymentcorrection">
+      <br/><br/>
+      <button type="button" onclick="paymentadjustmentfromAdvance()">CORRECTION</button>
+    </form>
+  </div>-->
+  <div class="paymentSection">
+    <h2>NEW PAYMENT</h2>
+    <form name="paymentForm">
+      <br/>
+      <label for="paymentMode">Payment Mode</label>
+      <select id="paymentMode">
+        <option value="CASH">CASH</option>
+        <option value="ACCOUNT">ACCOUNT</option>
+        <option value="DISCOUNT">DISCOUNT</option>
+        <!-- <option value="ADVANCE">ADVANCE</option> -->
+      </select>
+      <input type="number" name="paymentAmount" placeholder="paymentAmount"/>
+      <button type="button" onclick="confirmPayment()">CONFIRM PAYMENT</button>
+    </form>
+  </div>
+</main>
+<footer>
+  <p>&copy; 2024 All rights reserved. Developed by THEJ</p>
+</footer>
+<script th:src="@{/js/payment.js}" type="text/javascript"></script>
+<script th:src="@{/js/user.js}" type="text/javascript"></script>
+</body>
+</html>

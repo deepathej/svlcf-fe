@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UpdateUser</title>
+  <link th:href="@{/css/userUpdate.css}" rel="stylesheet"/>
+  <link th:href="@{/css/common.css}" rel="stylesheet"/>
+</head>
+<header>SREE VIJAYALAKSHMI CATTLE FEEDS</header>
+<nav class="menu">
+  <a th:href="@{/home}">HOME</a>
+  <a th:href="@{/sale}">SALE</a>
+  <a th:href="@{/payment}">PAYMENT</a>
+  <a th:href="@{/expense}">EXPENSES</a>
+  <a th:href="@{/users}">USERS</a>
+  <a th:href="@{/stock}">STOCK</a>
+  <a th:href="@{/tdPayment}">TD-PAYMENTS</a>
+  <a th:href="@{/tdExpense}">TD-EXPENSES</a>
+  <a th:href="@{/reports}">REPORTS</a>
+  <a th:href="@{/addStock}">ADD-STOCK</a>
+  <a th:href="@{/analytics}">ANALYTICS</a>
+  <a th:href="@{/extraLinks}">EXTRA-LINKS</a>
+</nav>
+<main>
+  <div class="userValidationSection">
+    <h2>VALIDATE USER</h2>
+    <form name="validateUserForm">
+      <input type="number" name="userId" placeholder="UserId" onchange="validateUserAndGetDetails('userUpdate')"/>
+      <textarea name="userDetails" rows="4" cols="50" placeholder="UserDetails"></textarea>
+    </form>
+  </div>
+  <div class="userUpdateSection">
+    <h2>UPDATE USER</h2>
+    <form name="updateUserForm">
+      <input type="text" name="name" placeholder="Name"/>
+      <textarea name="address" rows="4" cols="50" placeholder="Address"></textarea>
+      <input type="number" name="phone" placeholder="Mobile Number"/>
+      <input type="text" name="gstin" placeholder="GSTIN"/>
+      <button type="button" onclick="updateUserDetails()">UPDATE USER</button>
+    </form>
+  </div>
+</main>
+<footer>
+  <p>&copy; 2024 All rights reserved. Developed by THEJ</p>
+</footer>
+<script th:src="@{/js/user.js}" type="text/javascript"></script>
+</body>
+</html>

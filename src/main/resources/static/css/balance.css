@@ -1,0 +1,45 @@
+main {
+    min-height: 60.3vh;
+    align-items: top;
+    justify-content: center;
+}
+
+table {
+    width: 100%;
+    border: 1px solid #ddd;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    background-color: #f3f3f3;
+    border: 1px solid #ddd;
+    border-collapse: collapse;
+    padding: 12px;
+}
+
+th {
+    text-align: center;
+}
+td {
+    text-align: left;
+}
+
+.usersWithBalanceSection,
+.amountRequestFormSection {
+    background-color: #f3f3f3;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+}
+
+.usersWithBalanceSection {
+    width: 100%;
+}
+
+
+.amountRequestFormSection {
+    display: flex;
+    justify-content: center;
+    width: 97.3%;
+}
