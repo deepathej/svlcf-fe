@@ -8,7 +8,7 @@ docker build -t svlcffe .
 timeout /t 5
 docker run --network svlcf-net --name svlcffe -e TZ=Asia/Kolkata -p 9002:9002 -v C:\Data\OneDrive:/home/Data -d svlcffe:latest
 timeout /t 25
-cd C:/Data/Code/svlcfbe
+cd C:/Data/Code/svlcf-be
 call mvn clean install
 timeout /t 2
 cd support
